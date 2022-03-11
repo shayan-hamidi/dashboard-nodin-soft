@@ -4,15 +4,16 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
 import dashboardLogo from "./dashboard.png";
-import DashboardToolbarList from "./DashboardToolbarList"
+import DashboardToolbarButton from "./DashboardToolbarButton";
+import DashboardToolbarList from "./DashboardToolbarList";
 
 const DashboardToolbar = () => {
   return (
     <Paper
       sx={{
         background: "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
-        height: "90vh",
-        width: "15.6rem",
+        height: "91.1vh",
+        width: "17rem",
         position: "static",
         transition:
           " width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms, background-color 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms",
@@ -20,6 +21,9 @@ const DashboardToolbar = () => {
         borderRadius: "0.75rem",
         paddingTop: "1.8rem",
         boxShadow: "rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem",
+        display: "flex",
+        flexDirection: "column",
+        display: { xs: "none", sm: "none", md: "none", lg: "block" },
       }}
     >
       <Box>
@@ -36,7 +40,7 @@ const DashboardToolbar = () => {
           }}
           href="#"
         >
-          <img src={dashboardLogo} width="30rem" /> &nbsp;
+          <img src={dashboardLogo} width="30rem" alt="dashboardLogo" /> &nbsp;
           <Typography
             variant="body1"
             sx={{ fontSize: "0.875rem", fontWeight: "bold" }}
@@ -61,8 +65,17 @@ const DashboardToolbar = () => {
             "linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) !important",
         }}
       />
-      <Box>
-       <DashboardToolbarList/>
+      <DashboardToolbarList />
+      <Box
+        sx={{
+          alignSelf: "center",
+          marginTop: "7.1rem",
+          justifyContent: "center",
+          alignItems: "center",
+          display:"flex",
+        }}
+      >
+        <DashboardToolbarButton />
       </Box>
     </Paper>
   );

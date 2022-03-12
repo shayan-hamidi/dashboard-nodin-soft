@@ -2,25 +2,32 @@ import DashboardToolbar from "./components/DashboardToolbar/DashboardToolbar";
 import DashboardPage from "./components/DashboardPage/DashboardPage";
 import DashboardDetails from "./components/DashboardDetails/DashboardDetails";
 import Dashboardstatistics from "./components/Dashboardstatistics/Dashboardstatistics";
+import DashboardTableView from "./components/DashboardTableView/DashboardTableView"
 import { Box } from "@mui/system";
 import "./App.css";
+import { Grid } from "@mui/material";
 function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "row" }}>
+    <Grid container   sx={{ display: "flex", flexDirection: "row" }}>
+      <Grid item lg={2} >
       <DashboardToolbar />
+      </Grid>
+      <Grid lg={9} item>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: "73%",
-          marginLeft: "3rem",
+          marginLeft: "4rem",
+          width:"100%"
         }}
       >
         <DashboardPage />
         <DashboardDetails />
         <Dashboardstatistics />
+        <DashboardTableView />
       </Box>
-    </div>
+      </Grid>
+    </Grid>
   );
 }
 

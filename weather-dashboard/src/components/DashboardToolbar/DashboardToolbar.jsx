@@ -14,7 +14,7 @@ const DashboardToolbar = () => {
         background: "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
         height: "91.1vh",
         width: "17rem",
-        position: "static",
+        position: "fixed",
         transition:
           " width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms, background-color 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms",
         margin: "1rem 0rem 0rem 1rem",

@@ -1,4 +1,29 @@
-body{
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    background-color: rgb(240, 242, 245);
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-color: rgb(240, 242, 245);
+}
+ thead tr th div{
+    position: relative;
+    text-align: left;
+    opacity: 0.7;
+    background: transparent;
+    color: rgb(123, 128, 154);
+    box-shadow: none;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+tbody tr td{
+    text-align: left;
+    padding: 12px 24px;
+    opacity: 1;
+    background: transparent;
+    color: rgb(52, 71, 103);
+    box-shadow: none;
+    font-size: 0.875rem;
+    border-bottom: 0.0625rem solid rgb(240, 242, 245);
 }

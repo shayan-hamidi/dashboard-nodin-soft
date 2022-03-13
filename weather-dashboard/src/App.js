@@ -2,7 +2,8 @@ import DashboardToolbar from "./components/DashboardToolbar/DashboardToolbar";
 import DashboardPage from "./components/DashboardPage/DashboardPage";
 import DashboardDetails from "./components/DashboardDetails/DashboardDetails";
 import Dashboardstatistics from "./components/Dashboardstatistics/Dashboardstatistics";
-import DashboardTableView from "./components/DashboardTableView/DashboardTableView"
+import DashboardTableView from "./components/DashboardTableView/DashboardTableView";
+import DashboardWeatherCard from "./components/DashboardWeatherCard/DashboardWeatherCard"
 import { Box } from "@mui/system";
 import "./App.css";
 import { Grid } from "@mui/material";
@@ -12,19 +13,20 @@ function App() {
       <Grid item lg={2} >
       <DashboardToolbar />
       </Grid>
-      <Grid lg={9} item>
+      <Grid xs={12} lg={9} item>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           marginLeft: "4rem",
-          width:"100%"
+          width:"100%",
         }}
       >
         <DashboardPage />
         <DashboardDetails />
         <Dashboardstatistics />
         <DashboardTableView />
+        <DashboardWeatherCard />
       </Box>
       </Grid>
     </Grid>

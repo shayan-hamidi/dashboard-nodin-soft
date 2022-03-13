@@ -15,7 +15,7 @@ import DashboardOverview from "./DashboardOverview"
 import TableSingleRow from "./TableSingleRow";
 const DashboardTableView = () => {
   return (
-    <Box sx={{ margin: "10rem 0rem" }}>
+    <Box sx={{ margin: "3rem 0rem" }}>
       <Grid container spacing={3} sx={{ display: "flex", flexFlow: "row wrap" }}>
         <Grid item xs={12} md={6} lg={8}>
           <Paper
@@ -32,7 +32,7 @@ const DashboardTableView = () => {
               borderRadius: "0.75rem",
               boxShadow:
                 "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
-              overflow: "visible",
+              overflow: "hidden",
             }}
           >
             <Box

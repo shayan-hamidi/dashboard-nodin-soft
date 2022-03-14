@@ -59,7 +59,7 @@ const DashboardWeatherCard = () => {
           marginBottom: "4rem",
         }}
       >
-        {t("Weather Detecter")}
+        {t("Weather Detector")}
       </Typography>
       <Grid
         container

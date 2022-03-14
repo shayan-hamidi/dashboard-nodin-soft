@@ -13,7 +13,10 @@ import {
 import DashboardOverview from "./DashboardOverview"
 import TableSingleRow from "./TableSingleRow";
 import TableBoxHeader from "./TableBoxHeader";
+import { useTranslation } from "react-i18next";
+
 const DashboardTableView = () => {
+  const { t, i18n } = useTranslation();
   return (
     <Box sx={{ margin: "3rem 0rem" }}>
       <Grid container spacing={3} sx={{ display: "flex", flexFlow: "row wrap" }}>
@@ -60,16 +63,16 @@ const DashboardTableView = () => {
                       sx={{ display: "table-row", verticalAlign: "middle" }}
                     >
                       <TableCell>
-                        <Box>companies</Box>
+                        <Box>{t("companies")}</Box>
                       </TableCell>
                       <TableCell>
-                        <Box>members</Box>
+                        <Box>{t("members")}</Box>
                       </TableCell>
                       <TableCell>
-                        <Box>budget</Box>
+                        <Box>{t("budget")}</Box>
                       </TableCell>
                       <TableCell>
-                        <Box>completion</Box>
+                        <Box>{t("completion")}</Box>
                       </TableCell>
                     </TableRow>
                   </TableHead>
@@ -100,7 +103,7 @@ const DashboardTableView = () => {
                       }
                       logoName={"Fix Platform Errors"}
                       userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
-                      budget={"Not set"}
+                      budget={t("Not set")}
                       progressiveValue={"100"}
                       progressiveBg={"success"}
                     />

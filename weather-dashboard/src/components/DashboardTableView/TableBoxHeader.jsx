@@ -3,7 +3,10 @@ import { Box } from "@mui/system";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DoneIcon from "@mui/icons-material/Done";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 const TableBoxHeader = () => {
+  const { t, i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -33,7 +36,7 @@ const TableBoxHeader = () => {
             paddingBottom: "0.4rem",
           }}
         >
-          Projects
+          {t("Projects")}
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "row" }}>
           <DoneIcon
@@ -54,11 +57,11 @@ const TableBoxHeader = () => {
               fontSize: "0.9rem",
             }}
           >
-            30 done
+            30 {t("done")}
           </Typography>
           &nbsp;
           <Typography sx={{ color: "rgb(123, 128, 154)", fontSize: "0.9rem" }}>
-            this month
+            {t("this month")}
           </Typography>
         </Box>
       </Box>
@@ -84,9 +87,9 @@ const TableBoxHeader = () => {
             "aria-labelledby": "basic-button",
           }}
         >
-          <MenuItem onClick={handleClose}>Action</MenuItem>
-          <MenuItem onClick={handleClose}>Another action</MenuItem>
-          <MenuItem onClick={handleClose}>Something else</MenuItem>
+          <MenuItem onClick={handleClose}>{t("Action")}</MenuItem>
+          <MenuItem onClick={handleClose}>{t("Another action")}</MenuItem>
+          <MenuItem onClick={handleClose}>{t("Something else")}</MenuItem>
         </Menu>
       </Box>
     </Box>

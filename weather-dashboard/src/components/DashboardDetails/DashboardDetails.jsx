@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 
 const DashboardDetails = () => {
   const { t, i18n } = useTranslation();
-  // const Bookings: {t('bookings')}
   return (
     <Grid
       container
@@ -22,10 +21,10 @@ const DashboardDetails = () => {
           bgShadow={
             "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(64 64 64 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem"
           }
-          title={"Bookings"}
+          title={t("Bookings")}
           number={281}
           percent={"+55%"}
-          time={"than last week"}
+          time={t("than last week")}
         />
       </Grid>
       <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -37,10 +36,10 @@ const DashboardDetails = () => {
           bgShadow={
             "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(0 187 212 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem"
           }
-          title={"Today's Users"}
+          title={t("Today's Users")}
           number={"2,300"}
           percent={"+3%"}
-          time={"than last month"}
+          time={t("than last month")}
         />
       </Grid>
       <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -52,10 +51,10 @@ const DashboardDetails = () => {
           bgShadow={
             "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(76 175 79 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem"
           }
-          title={"Revenue"}
+          title={t("Revenue")}
           number={"34k"}
           percent={"+1%"}
-          time={"than yesterday"}
+          time={t("than yesterday")}
         />
       </Grid>
       <Grid item xs={12} sm={12} md={6} lg={3}>
@@ -67,9 +66,9 @@ const DashboardDetails = () => {
           bgShadow={
             "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(233 30 98 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem"
           }
-          title={"Followers"}
+          title={t("Followers")}
           number={"+91"}
-          time={"Just updated"}
+          time={t("Just updated")}
         />
       </Grid>
     </Grid>

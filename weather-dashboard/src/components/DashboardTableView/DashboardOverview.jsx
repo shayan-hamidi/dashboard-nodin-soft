@@ -7,7 +7,10 @@ import Inventory2Icon from "@mui/icons-material/Inventory2";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PaymentIcon from "@mui/icons-material/Payment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import { useTranslation } from "react-i18next";
+
 const DashboardOverview = () => {
+  const { t, i18n } = useTranslation();
   const afterStyles = {
     content: `""`,
     position: "absolute",
@@ -46,7 +49,7 @@ const DashboardOverview = () => {
       <Box
         sx={{ paddingTop: "24px", paddingLeft: "24px", paddingRight: "24px" }}
       >
-        <Typography variant="h6">Orders overview</Typography>
+        <Typography variant="h6">{t("Orders overview")}</Typography>
         <Box sx={{ marginTop: "0.7rem" }}>
           <Typography
             sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
@@ -75,7 +78,7 @@ const DashboardOverview = () => {
             >
               24%
             </Typography>
-            &nbsp; This month
+            &nbsp; {t("this month")}
           </Typography>
         </Box>
       </Box>
@@ -83,33 +86,33 @@ const DashboardOverview = () => {
         <SingleOverView
           bgOverViewIcon={"rgb(76, 175, 80)"}
           iconComponent={NotificationsIcon}
-          title={"$2400, Design changes"}
-          subTitle={"22 DEC 7:20 PM"}
+          title={t("$2400,Design changes")}
+          subTitle={t("22 DEC 7:20 PM")}
           afterStyles={afterStyles}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(244, 67, 53)"}
           iconComponent={Inventory2Icon}
-          title={"New order #1832412"}
-          subTitle={"21 DEC 11 PM"}
+          title={t("New order #1832412")}
+          subTitle={t("21 DEC 11 PM")}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(26, 115, 232)"}
           iconComponent={ShoppingCartIcon}
-          title={"Server payments for April"}
-          subTitle={"21 DEC 9:34 PM"}
+          title={t("Server payments for April")}
+          subTitle={t("21 DEC 9:34 PM")}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(251, 140, 0)"}
           iconComponent={PaymentIcon}
-          title={"New card added for order #4395133"}
-          subTitle={"20 DEC 2:20 AM"}
+          title={t("New card added for order #4395133")}
+          subTitle={t("20 DEC 2:20 AM")}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(233, 30, 99)"}
           iconComponent={VpnKeyIcon}
-          title={"New card added for order #4395133"}
-          subTitle={"18 DEC 4:54 AM"}
+          title={t("New card added for order #4395133")}
+          subTitle={t("18 DEC 4:54 AM")}
           beforeStyles={beforeStyles}
         />
       </Box>

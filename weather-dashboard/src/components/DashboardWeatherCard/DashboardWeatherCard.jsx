@@ -3,7 +3,9 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import WeatherIcon from "../../WeatherIcon.png";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 const DashboardWeatherCard = () => {
+  const { t, i18n } = useTranslation();
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
 // useEffect(()=>{
@@ -57,7 +59,7 @@ const DashboardWeatherCard = () => {
           marginBottom: "4rem",
         }}
       >
-        Weather Detecter
+        {t("Weather Detecter")}
       </Typography>
       <Grid
         container
@@ -126,7 +128,7 @@ const DashboardWeatherCard = () => {
                 }}
                 onClick={searchHandler}
               >
-                Search City
+                {t("Search City")}
               </Button>
             </Grid>
           </Grid>

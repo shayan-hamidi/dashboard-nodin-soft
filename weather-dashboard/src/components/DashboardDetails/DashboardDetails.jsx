@@ -12,7 +12,7 @@ const DashboardDetails = () => {
     <Grid
       container
       spacing={3}
-      sx={{ display: "flex", flexDirection: "row",marginTop: { xs: '6rem',lg:"2rem"} }}
+      sx={{ display: "flex", flexDirection: "row",marginTop: { xs: '6rem',lg:"2rem"},marginBottom:"1rem" }}
     >
       <Grid item xs={12} sm={12} md={6} lg={3}>
         <DashboardDetail

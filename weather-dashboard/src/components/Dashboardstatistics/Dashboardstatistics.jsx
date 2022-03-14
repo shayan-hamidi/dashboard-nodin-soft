@@ -1,6 +1,4 @@
-import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
-import HighchartsReact from "highcharts-react-official";
-import Highcharts from "highcharts";
+import { Box, Grid } from "@mui/material";
 import WebsiteViewsStatistic from "./WebsiteViewsStatistic";
 import DailySalesStatistic from "./DailySalesStatistic";
 import CompletedTasksStatistic from "./CompletedTasksStatistic";
@@ -15,7 +13,7 @@ const Dashboardstatistics = () => {
         boxShadow: "none",
       }}
     >
-      <Grid container spacing={5} sx={{ display: "flex", backgroundColor: "red" }}>
+      <Grid container spacing={2} sx={{ display: "flex" }}>
         <Grid item xs={12} sm={12} md={6} lg={4}>
           <WebsiteViewsStatistic />
         </Grid>

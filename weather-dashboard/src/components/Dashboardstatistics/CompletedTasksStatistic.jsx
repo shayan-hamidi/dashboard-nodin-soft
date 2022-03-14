@@ -1,48 +1,86 @@
 import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
-const CompletedTasksStatistic = () => {
-    const options = {
-        chart: {
-          type: "column",
-          backgroundColor: "transparent",
-        },
-        title: {
-          text: "",
-        },
-        xAxis: {
-          categories: ["M", "T", "W", "T", "F", "S", "S"],
-        },
-        yAxis: {
-          min: 0,
-          title: {
-            text: "",
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import { useTranslation } from "react-i18next";
+
+const CompletedTasksStatic = () => {
+  const { t, i18n } = useTranslation();
+  const options = {
+    chart: {
+      backgroundColor: "transparent",
+      height: 180,
+      width: 330,
+      style: {
+        marginTop: "15",
+        height: "240",
+      },
+    },
+    title: {
+      text: "",
+    },
+
+    subtitle: {
+      text: "",
+    },
+
+    yAxis: {
+      style: {
+        color: "white",
+      },
+      min: 0,
+      title: {
+        text: "",
+      },
+      max: 600,
+      tickInterval: 200,
+    },
+
+    xAxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    legend: {
+      layout: "vertical",
+      align: "right",
+      verticalAlign: "middle",
+    },
+
+    plotOptions: {
+      column: {
+        pointPadding: 0.15,
+        borderWidth: 0,
+        showInLegend: false,
+      },
+      series: {
+        color: "white",
+      },
+    },
+
+    series: [
+      {
+        name: "Desktop apps",
+        data: [10, 5, 300, 200, 500, 210, 400, 200, 490],
+      },
+    ],
+
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,
           },
-          max: 60,
-          tickInterval: 20,
-        },
-        tooltip: {
-          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-          pointFormat:
-            '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-          footerFormat: "</table>",
-          shared: true,
-          useHTML: true,
-        },
-        plotOptions: {
-          column: {
-            pointPadding: 0.15,
-            borderWidth: 0,
+          chartOptions: {
+            legend: {
+              layout: "horizontal",
+              align: "center",
+              verticalAlign: "bottom",
+            },
           },
         },
-        series: [
-          {
-            name: "",
-            data: [49, 19.9, 106.4, 9, 21, 45, 40],
-          },
-        ],
-      };
+      ],
+    },
+  };
   return (
     <Box
       sx={{
@@ -73,27 +111,48 @@ const CompletedTasksStatistic = () => {
           <Box
             sx={{
               paddingTop: "16px",
-              paddingBottom: "16px",
               paddingRight: "4px",
               marginTop: "-40px",
-              height: "12.5rem",
+              height: "200px",
               opacity: "1",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               background:
-                "linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232))",
+                "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
               color: "rgb(52, 71, 103)",
               borderRadius: "0.5rem",
               boxShadow:
-                "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(0 187 212 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem",
+                "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(64 64 64 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem",
             }}
           >
             <HighchartsReact highcharts={Highcharts} options={options} />
           </Box>
           <Box sx={{ padding: "24px 8px 8px" }}>
-            <Typography></Typography>
-            <Typography></Typography>
+            <Typography
+              sx={{
+                fontSize: "1rem",
+                lineHeight: "1.85",
+                paddingBottom: "0.2rem",
+                fontWeight: "700",
+                letterspacing: "0.0075em",
+                textTransform: "capitalize",
+                color: "rgb(52, 71, 103)",
+              }}
+            >
+              {t("Completed Tasks")}
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: "0.875rem",
+                lineHeight: "1.5",
+                letterspacing: "0.02857em",
+                color: "rgb(123, 128, 154)",
+                fontWeight: "300",
+              }}
+            >
+              {t("Last Campaign Performance")}
+            </Typography>
             <Divider
               sx={{
                 flexShrink: "0",
@@ -109,9 +168,31 @@ const CompletedTasksStatistic = () => {
                   "linear-gradient(to right, rgba(52, 71, 103, 0), rgba(52, 71, 103, 0.4), rgba(52, 71, 103, 0)) !important",
               }}
             ></Divider>
-            <Box>
-              <Typography></Typography>
-              <Typography>campagn sent 2 days ago</Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <ScheduleIcon
+                sx={{
+                  color: "rgb(123, 128, 154)",
+                  width: "1rem",
+                  paddingRight: "0.2rem",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "0.875rem",
+                  lineHeight: "1.5",
+                  letterspacing: "0.02857em",
+                  color: "rgb(123, 128, 154)",
+                  fontWeight: "300",
+                }}
+              >
+                {t("just updated")}
+              </Typography>
             </Box>
           </Box>
         </Box>
@@ -119,4 +200,4 @@ const CompletedTasksStatistic = () => {
     </Box>
   );
 };
-export default CompletedTasksStatistic;
+export default CompletedTasksStatic;

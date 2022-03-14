@@ -1,11 +1,22 @@
 import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import { useTranslation } from "react-i18next";
+
 const WebsiteViewsStatistic = () => {
+    const { t, i18n } = useTranslation();
+
   const options = {
     chart: {
       type: "column",
       backgroundColor: "transparent",
+      height: 160,
+      width: 330,
+      style: {
+        marginTop: "10",
+        height: "240",
+      },
     },
     title: {
       text: "",
@@ -34,12 +45,16 @@ const WebsiteViewsStatistic = () => {
       column: {
         pointPadding: 0.15,
         borderWidth: 0,
+        showInLegend: false,
       },
+      series: {
+        borderRadius: 5
+    }
     },
     series: [
       {
-        name: "",
-        data: [49, 19.9, 106.4, 9, 21, 45, 40],
+        Symbol: undefined,
+        data: [49, 19.9, 10, 21, 49, 10, 40],
       },
     ],
   };
@@ -74,10 +89,9 @@ const WebsiteViewsStatistic = () => {
           <Box
             sx={{
               paddingTop: "16px",
-              paddingBottom: "16px",
               paddingRight: "4px",
               marginTop: "-40px",
-              height: "12.5rem",
+              height: "200px",
               opacity: "1",
               display: "flex",
               justifyContent: "center",
@@ -93,8 +107,30 @@ const WebsiteViewsStatistic = () => {
             <HighchartsReact highcharts={Highcharts} options={options} />
           </Box>
           <Box sx={{ padding: "24px 8px 8px" }}>
-            <Typography></Typography>
-            <Typography></Typography>
+            <Typography
+              sx={{
+                fontSize: "1rem",
+                lineHeight: "1.85",
+                paddingBottom:"0.2rem",
+                fontWeight: "700",
+                letterspacing: "0.0075em",
+                textTransform: "capitalize",
+                color: "rgb(52, 71, 103)",
+              }}
+            >
+              {t("Website Views")}
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: "0.875rem",
+                lineHeight: "1.5",
+                letterspacing: "0.02857em",
+                color: "rgb(123, 128, 154)",
+                fontWeight: "300",
+              }}
+            >
+              {t("Last Campaign Performance")}
+            </Typography>
             <Divider
               sx={{
                 flexShrink: "0",
@@ -110,9 +146,25 @@ const WebsiteViewsStatistic = () => {
                   "linear-gradient(to right, rgba(52, 71, 103, 0), rgba(52, 71, 103, 0.4), rgba(52, 71, 103, 0)) !important",
               }}
             ></Divider>
-            <Box>
-              <Typography></Typography>
-              <Typography>campagn sent 2 days ago</Typography>
+            <Box sx={{ display: "flex", flexDirection: "row", alignItems:"center" }}>
+              <ScheduleIcon
+                sx={{
+                  color: "rgb(123, 128, 154)",
+                  width: "1rem",
+                  paddingRight: "0.2rem",
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "0.875rem",
+                  lineHeight: "1.5",
+                  letterspacing: "0.02857em",
+                  color: "rgb(123, 128, 154)",
+                  fontWeight: "300",
+                }}
+              >
+                {t("campagn sent 2 days ago")}
+              </Typography>
             </Box>
           </Box>
         </Box>

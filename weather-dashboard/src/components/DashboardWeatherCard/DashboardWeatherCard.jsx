@@ -1,13 +1,19 @@
-import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
+import { Autocomplete, Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
+import WeatherIcon from "../../WeatherIcon.png";
 import { useEffect, useState } from "react";
 const DashboardWeatherCard = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
+// useEffect(()=>{
+//     axios.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=2ad622963b956f73c2e0395cb01fad6b").then((response) => {
+//       setData(response.data);
+//       console.log(response.data);
+//     });
 
+// },[])
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=2ad622963b956f73c2e0395cb01fad6b`;
-
   const searchLocation = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
@@ -70,6 +76,28 @@ const DashboardWeatherCard = () => {
             sx={{ display: "flex", flexDirection: "column" }}
           >
             <Grid item xs={12} sm={12} md={12} lg={12}>
+              {/* <Autocomplete
+                freeSolo
+                id="free-solo-2-demo"
+                disableClearable
+                // options={data.map((option) => option.title)}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    InputProps={{
+                      ...params.InputProps,
+                      type: "search",
+                    }}
+                    label="Weather Condition"
+                    variant="standard"
+                    value={location}
+                    onChange={(event) => setLocation(event.target.value)}
+                    onKeyPress={searchLocation}
+                    placeholder="Enter Location"
+                    sx={{ width: "90%" }}
+                  />
+                )}
+              /> */}
               <TextField
                 label="Weather Condition"
                 variant="standard"
@@ -114,6 +142,17 @@ const DashboardWeatherCard = () => {
               border: "0px solid rgba(0, 0, 0, 0.125)",
             }}
           >
+            {!data.name && (
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img src={WeatherIcon} width={"200"} />
+              </Box>
+            )}
             <Box>
               <Box>
                 <Typography

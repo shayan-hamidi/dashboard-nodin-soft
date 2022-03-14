@@ -4,14 +4,18 @@ import DashboardDetail from "./DashboardDetail";
 import LeaderboardIcon from "@mui/icons-material/Leaderboard";
 import StoreIcon from "@mui/icons-material/Store";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import { useTranslation } from "react-i18next";
+
 const DashboardDetails = () => {
+  const { t, i18n } = useTranslation();
+  // const Bookings: {t('bookings')}
   return (
     <Grid
       container
       spacing={3}
       sx={{ display: "flex", flexDirection: "row", marginTop: "2.2rem" }}
     >
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <DashboardDetail
           iconComponent={WeekendIcon}
           bgLogo={"linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))"}
@@ -24,7 +28,7 @@ const DashboardDetails = () => {
           time={"than last week"}
         />
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <DashboardDetail
           iconComponent={LeaderboardIcon}
           bgLogo={
@@ -39,7 +43,7 @@ const DashboardDetails = () => {
           time={"than last month"}
         />
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <DashboardDetail
           iconComponent={StoreIcon}
           bgLogo={
@@ -54,7 +58,7 @@ const DashboardDetails = () => {
           time={"than yesterday"}
         />
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <DashboardDetail
           iconComponent={PersonAddIcon}
           bgLogo={

@@ -9,8 +9,8 @@ import "./App.css";
 import { Grid } from "@mui/material";
 function App() {
   return (
-    <Grid container   sx={{ display: "flex", flexDirection: "row" }}>
-      <Grid item lg={2} >
+    <Grid container spacing={3} sx={{ display: "flex", flexDirection: "row" }}>
+      <Grid item lg={2.6} >
       <DashboardToolbar />
       </Grid>
       <Grid xs={12} lg={9} item>
@@ -18,8 +18,6 @@ function App() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          marginLeft: "4rem",
-          width:"100%",
         }}
       >
         <DashboardPage />

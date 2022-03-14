@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
@@ -8,25 +7,30 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import TextField from "@mui/material/TextField";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import i18n from "../../i18n";
+import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const DashboardHeader = () => {
+  const { t, i18n } = useTranslation();
   const changeLanguage = (ln) => {
     return () => {
       i18n.changeLanguage(ln);
     };
   };
   return (
-    <header
+    <Grid
+    container
       style={{
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: "baseline",
         width: "100%",
         marginTop: "2rem",
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Grid item xs={12} sm={12} md={6} sx={{ display: "flex", flexDirection: "column" }}>
         {" "}
         <Breadcrumbs
           aria-label="breadcrumb"
@@ -36,56 +40,68 @@ const DashboardHeader = () => {
             <HomeIcon sx={{ fontSize: "1.1rem", paddingTop: "0.4rem" }} />
           </Link>
           <Link
-            underline="hover"
             color="inherit"
             href="/getting-started/installation/"
+            sx={{ textDecoration: "none", cursor: "auto" }}
           >
-            Dashboard
+            {t('Dashboard')}
           </Link>
         </Breadcrumbs>
-        <Typography variant="h6">Dashboard</Typography>
-      </Box>
-      <Box
+        <Typography variant="h6" sx={{ fontWeight: "700", fontSize: "1rem" }}>
+        {t('Dashboard')}
+        </Typography>
+      </Grid>
+      <Grid item xs={12} sm={12} md={6}
         sx={{
           display: "flex",
           justifyContent: "space-around",
-          alignItems: "center",
+          alignItems: "baseline",
         }}
       >
-        <Box
-          sx={{ width: "100%", clear: "both", display: "table" }}
+        <ToggleButtonGroup
+          sx={{ marginRight: "1rem", padding: "1rem" }}
+          color="primary"
+          exclusive
         >
-          <Button
-            onClick={changeLanguage("pe")}
-            sx={{ width: "50%", border: "1px solid gray" }}
-          >
-            فارسی
-          </Button>
-          <Button
-            onClick={changeLanguage("en")}
-            sx={{ width: "50%", border: "1px solid gray" }}
-          >
+          <ToggleButton value="english" onClick={changeLanguage("en")}>
             English
-          </Button>
-        </Box>
-        <TextField id="outlined-basic" label="Search here" variant="outlined" />
+          </ToggleButton>
+          <ToggleButton value="persian" onClick={changeLanguage("pe")}>
+            فارسی
+          </ToggleButton>
+        </ToggleButtonGroup>
+        <TextField
+        size="small"
+          label="Search here"
+          variant="outlined"
+          sx={{ height: "60px" }}
+        />
         <Link>
           <Button>
-            <AccountCircleIcon />
+            <AccountCircleIcon sx={{ color: "rgb(123, 128, 154)" }} />
+          </Button>
+        </Link>
+        <Link
+          sx={{
+            display: { xs: "block", sm: "block", md: "block", lg: "none" },
+          }}
+        >
+          <Button>
+            <MenuOpenIcon />
           </Button>
         </Link>
         <Link>
           <Button>
-            <SettingsIcon />
+            <SettingsIcon sx={{ color: "rgb(123, 128, 154)" }} />
           </Button>
         </Link>
         <Link>
           <Button>
-            <NotificationsIcon />
+            <NotificationsIcon sx={{ color: "rgb(123, 128, 154)" }} />
           </Button>
         </Link>
-      </Box>
-    </header>
+      </Grid>
+    </Grid>
   );
 };
 export default DashboardHeader;

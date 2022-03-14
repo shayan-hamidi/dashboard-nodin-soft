@@ -8,15 +8,20 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PaymentIcon from "@mui/icons-material/Payment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 const DashboardOverview = () => {
-  const extraStyles = {
+  const afterStyles = {
     content: `""`,
     position: "absolute",
     top: "10rem",
     left: "1.9rem",
-    height: "60%",
+    height: "48%",
     opacity: "1",
     zIndex: "0",
     borderRight: "0.125rem solid rgb(222, 226, 230)",
+  };
+  const beforeStyles = {
+      ...afterStyles,
+    top: "20rem",
+    height: "22%",
   };
   return (
     <Paper
@@ -80,35 +85,32 @@ const DashboardOverview = () => {
           iconComponent={NotificationsIcon}
           title={"$2400, Design changes"}
           subTitle={"22 DEC 7:20 PM"}
-          extraStyles={extraStyles}
+          afterStyles={afterStyles}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(244, 67, 53)"}
           iconComponent={Inventory2Icon}
           title={"New order #1832412"}
           subTitle={"21 DEC 11 PM"}
-          extraStyles={extraStyles}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(26, 115, 232)"}
           iconComponent={ShoppingCartIcon}
           title={"Server payments for April"}
           subTitle={"21 DEC 9:34 PM"}
-          extraStyles={extraStyles}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(251, 140, 0)"}
           iconComponent={PaymentIcon}
           title={"New card added for order #4395133"}
           subTitle={"20 DEC 2:20 AM"}
-          extraStyles={extraStyles}
         />
         <SingleOverView
           bgOverViewIcon={"rgb(233, 30, 99)"}
           iconComponent={VpnKeyIcon}
           title={"New card added for order #4395133"}
           subTitle={"18 DEC 4:54 AM"}
-          extraStyles={extraStyles}
+          beforeStyles={beforeStyles}
         />
       </Box>
     </Paper>

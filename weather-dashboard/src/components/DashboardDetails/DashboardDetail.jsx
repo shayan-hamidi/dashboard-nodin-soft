@@ -66,7 +66,12 @@ const DashboardDetail = ({
               alignItems: "end",
             }}
           >
-            <Typography variant="subtitle1">{title}</Typography>{" "}
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "rgb(123, 128, 154)", fontWeight: "300",paddingTop:"1rem" }}
+            >
+              {title}
+            </Typography>{" "}
             <Typography
               variant="h5"
               sx={{ fontWeight: "bold", color: "rgb(52,71,103)" }}
@@ -95,7 +100,7 @@ const DashboardDetail = ({
             variant="body1"
             sx={{ paddingLeft: "1rem", paddingBottom: "1rem" }}
           >
-            <Typography variant="span" sx={{ color: "green" }}>
+            <Typography variant="span" sx={{ color: "rgb(76, 175, 80)",fontWeight:"700" }}>
               {percent}
             </Typography>
             &nbsp;{time}

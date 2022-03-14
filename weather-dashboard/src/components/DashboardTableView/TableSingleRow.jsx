@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 const TableSingleRow = ({
+  userLogo,
   logo,
   logoName,
   budget,
@@ -28,7 +29,9 @@ const TableSingleRow = ({
             >
               <img width={"40rem"} src={logo} />
             </Avatar>
-            <Typography>{logoName}</Typography>
+            <Typography sx={{ color: "rgb(52, 71, 103)", fontWeight: "600",marginLeft:"8px" }}>
+              {logoName}
+            </Typography>
           </Box>
         </Box>
       </TableCell>
@@ -51,10 +54,7 @@ const TableSingleRow = ({
                 cursor: "pointer",
               }}
             >
-              <img
-                width="25rem"
-                src={logo}
-              />
+              <img width="25rem" src={userLogo} />
             </Avatar>
             <Avatar
               sx={{
@@ -66,10 +66,7 @@ const TableSingleRow = ({
                 marginLeft: "-10px",
               }}
             >
-              <img
-                width="25rem"
-                src={logo}
-              />
+              <img width="25rem" src={userLogo} />
             </Avatar>
             <Avatar
               sx={{
@@ -81,10 +78,7 @@ const TableSingleRow = ({
                 cursor: "pointer",
               }}
             >
-              <img
-                width="25rem"
-                src={logo}
-              />
+              <img width="25rem" src={userLogo} />
             </Avatar>
             <Avatar
               sx={{
@@ -96,10 +90,7 @@ const TableSingleRow = ({
                 cursor: "pointer",
               }}
             >
-              <img
-                width="25rem"
-                src={logo}
-              />
+              <img width="25rem" src={userLogo} />
             </Avatar>
           </Box>
         </Box>

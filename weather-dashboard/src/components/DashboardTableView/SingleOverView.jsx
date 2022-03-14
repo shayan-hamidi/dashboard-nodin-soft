@@ -1,13 +1,15 @@
 import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-const SingleOverView = ({iconComponent: IconComponent,extraStyles,bgOverViewIcon,title,subTitle}) => {
+const SingleOverView = ({iconComponent: IconComponent,beforeStyles,afterStyles,bgOverViewIcon,title,subTitle}) => {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        "::after": extraStyles,
+        "::after": afterStyles,
+        "::before": beforeStyles,
+        marginBottom:"2rem"
       }}
     >
       <Box

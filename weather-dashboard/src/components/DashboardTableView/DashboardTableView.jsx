@@ -10,9 +10,9 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DashboardOverview from "./DashboardOverview"
 import TableSingleRow from "./TableSingleRow";
+import TableBoxHeader from "./TableBoxHeader";
 const DashboardTableView = () => {
   return (
     <Box sx={{ margin: "3rem 0rem" }}>
@@ -35,38 +35,15 @@ const DashboardTableView = () => {
               overflow: "hidden",
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "2rem",
-              }}
-            >
-              <Box>
-                <Typography>Projects</Typography>
-                <Box>
-                  <Typography></Typography>
-                  <Typography>30 done</Typography>
-                </Box>
-              </Box>
-              <Box
-                sx={{
-                  paddingLeft: "1rem",
-                  paddingRight: "1rem",
-                  color: "rgb(123, 128, 154)",
-                }}
-              >
-                <MoreVertIcon />
-              </Box>
-            </Box>
+              <TableBoxHeader />
             <Box>
               <TableContainer
                 sx={{
                   width: "100%",
-                  overflowX: "auto",
+                  overflowX: "hidden",
                   backgroundColor: "rgb(255, 255, 255)",
                   borderRadius: "0.75rem",
+                  marginTop:"-15px"
                 }}
               >
                 <Table
@@ -75,6 +52,7 @@ const DashboardTableView = () => {
                     width: "100%",
                     bordercollapse: "collapse",
                     borderSpacing: "0px",
+                    overflow:"visible"
                   }}
                 >
                   <TableHead>
@@ -101,6 +79,7 @@ const DashboardTableView = () => {
                         "https://demos.creative-tim.com/material-dashboard-react/static/media/logo-xd.6e37886f94dba0c2967ece68a152e30c.svg"
                       }
                       logoName={"Material UI XD Version"}
+                      userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
                       budget={"$14,000"}
                       progressiveValue={"60"}
                       progressiveBg={"primary"}
@@ -110,6 +89,7 @@ const DashboardTableView = () => {
                         "https://demos.creative-tim.com/material-dashboard-react/static/media/logo-atlassian.f2b0e8570a4b4ce768854ff3dad1a6e1.svg"
                       }
                       logoName={"Add Progress Track"}
+                      userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
                       budget={"$3,000"}
                       progressiveValue={"10"}
                       progressiveBg={"primary"}
@@ -119,6 +99,7 @@ const DashboardTableView = () => {
                         "https://demos.creative-tim.com/material-dashboard-react/static/media/logo-slack.7c47c5aa474b5c4fb39fcf05ffb8e4e7.svg"
                       }
                       logoName={"Fix Platform Errors"}
+                      userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
                       budget={"Not set"}
                       progressiveValue={"100"}
                       progressiveBg={"success"}
@@ -128,6 +109,7 @@ const DashboardTableView = () => {
                         "https://demos.creative-tim.com/material-dashboard-react/static/media/logo-spotify.e83cf56c9d99a1fdf59e8deb58bbe470.svg"
                       }
                       logoName={"Launch our Mobile App"}
+                      userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
                       budget={"$20,500"}
                       progressiveValue={"100"}
                       progressiveBg={"success"}
@@ -137,6 +119,7 @@ const DashboardTableView = () => {
                         "https://demos.creative-tim.com/material-dashboard-react/static/media/logo-xd.6e37886f94dba0c2967ece68a152e30c.svg"
                       }
                       logoName={"Add the New Pricing Page"}
+                      userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
                       budget={"$500"}
                       progressiveValue={"20"}
                       progressiveBg={"primary"}
@@ -146,6 +129,7 @@ const DashboardTableView = () => {
                         "https://demos.creative-tim.com/material-dashboard-react/static/media/logo-invision.a1062115730dcd10e1c4f4abe7b9ab33.svg"
                       }
                       logoName={"Redesign New Online Shop"}
+                      userLogo={"https://demos.creative-tim.com/material-dashboard-react/static/media/team-1.0fd36e0ee93dcfacdef8.jpg"}
                       budget={"$2,000"}
                       progressiveValue={"30"}
                       progressiveBg={"primary"}

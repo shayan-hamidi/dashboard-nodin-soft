@@ -1,5 +1,7 @@
+import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 const DashboardToolbarButton = () => {
+  const { t, i18n } = useTranslation();
   return (
     <Button
       sx={{
@@ -9,7 +11,7 @@ const DashboardToolbarButton = () => {
         padding: "0.5rem 2.9rem !important",
       }}
     >
-      Upgrade To Pro
+      {t("Upgrade To Pro")}
     </Button>
   );
 };

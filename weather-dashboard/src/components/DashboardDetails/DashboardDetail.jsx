@@ -12,7 +12,7 @@ const DashboardDetail = ({
   time,
 }) => {
   return (
-    <Box>
+    <Box sx={{marginTop:"5.3rem"}}>
       <Paper
         sx={{
           color: "rgba(0, 0, 0, 0.87)",

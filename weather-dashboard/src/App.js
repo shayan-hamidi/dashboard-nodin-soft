@@ -18,6 +18,7 @@ function App() {
         sx={{
           display: "flex",
           flexDirection: "column",
+          justifyContent:"center",
         }}
       >
         <DashboardPage />

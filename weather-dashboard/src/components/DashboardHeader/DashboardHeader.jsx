@@ -11,8 +11,17 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import i18n from "../../i18n";
 import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
+import { useState } from "react";
 const DashboardHeader = () => {
+  const [nav, setNav] = useState(false);
+  const changeBackground = () => {
+    if (window.scrollY >= 1) {
+      setNav(true);
+    } else {
+      setNav(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
   const { t, i18n } = useTranslation();
   const changeLanguage = (ln) => {
     return () => {
@@ -21,16 +30,17 @@ const DashboardHeader = () => {
   };
   return (
     <Grid
-    container
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "baseline",
-        width: "100%",
-        marginTop: "2rem",
-      }}
+      container
+      className={nav ? "dashboardNav active" : "dashboardNav"}
+      sx={{ width: { xs: '100%',lg:"75%"}}}
     >
-      <Grid item xs={12} sm={12} md={6} sx={{ display: "flex", flexDirection: "column" }}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={6}
+        sx={{ display: "flex", flexDirection: "column" }}
+      >
         {" "}
         <Breadcrumbs
           aria-label="breadcrumb"
@@ -44,14 +54,18 @@ const DashboardHeader = () => {
             href="/getting-started/installation/"
             sx={{ textDecoration: "none", cursor: "auto" }}
           >
-            {t('Dashboard')}
+            {t("Dashboard")}
           </Link>
         </Breadcrumbs>
         <Typography variant="h6" sx={{ fontWeight: "700", fontSize: "1rem" }}>
-        {t('Dashboard')}
+          {t("Dashboard")}
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={12} md={6}
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={6}
         sx={{
           display: "flex",
           justifyContent: "space-around",
@@ -71,7 +85,7 @@ const DashboardHeader = () => {
           </ToggleButton>
         </ToggleButtonGroup>
         <TextField
-        size="small"
+          size="small"
           label="Search here"
           variant="outlined"
           sx={{ height: "60px" }}

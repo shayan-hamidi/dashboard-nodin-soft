@@ -7,13 +7,14 @@ import dashboardLogo from "./dashboard.png";
 import DashboardToolbarButton from "./DashboardToolbarButton";
 import DashboardToolbarList from "./DashboardToolbarList";
 import { Drawer } from "@mui/material";
+import { useState } from "react";
 
-const DashboardToolbar = () => {
+const DashboardToolbar = ({drawerDir}) => {
   return (
     <Drawer
-      elevation={16}
+      elevation={0}
       variant="permanent"
-      square={true}
+      anchor={drawerDir}
     >
       <Paper
         sx={{

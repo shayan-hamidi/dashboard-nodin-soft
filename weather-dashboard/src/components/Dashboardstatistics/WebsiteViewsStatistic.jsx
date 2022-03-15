@@ -1,12 +1,10 @@
-import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
+import { Box, Divider, Paper, Typography } from "@mui/material";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { useTranslation } from "react-i18next";
-
 const WebsiteViewsStatistic = () => {
-    const { t, i18n } = useTranslation();
-
+  const { t, i18n } = useTranslation();
   const options = {
     chart: {
       type: "column",
@@ -48,8 +46,8 @@ const WebsiteViewsStatistic = () => {
         showInLegend: false,
       },
       series: {
-        borderRadius: 5
-    }
+        borderRadius: 5,
+      },
     },
     series: [
       {
@@ -111,7 +109,7 @@ const WebsiteViewsStatistic = () => {
               sx={{
                 fontSize: "1rem",
                 lineHeight: "1.85",
-                paddingBottom:"0.2rem",
+                paddingBottom: "0.2rem",
                 fontWeight: "700",
                 letterspacing: "0.0075em",
                 textTransform: "capitalize",
@@ -146,7 +144,13 @@ const WebsiteViewsStatistic = () => {
                   "linear-gradient(to right, rgba(52, 71, 103, 0), rgba(52, 71, 103, 0.4), rgba(52, 71, 103, 0)) !important",
               }}
             ></Divider>
-            <Box sx={{ display: "flex", flexDirection: "row", alignItems:"center" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
               <ScheduleIcon
                 sx={{
                   color: "rgb(123, 128, 154)",

@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@mui/material";
+import { Paper, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -8,7 +8,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PaymentIcon from "@mui/icons-material/Payment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useTranslation } from "react-i18next";
-
 const DashboardOverview = () => {
   const { t, i18n } = useTranslation();
   const afterStyles = {
@@ -22,7 +21,7 @@ const DashboardOverview = () => {
     borderRight: "0.125rem solid rgb(222, 226, 230)",
   };
   const beforeStyles = {
-      ...afterStyles,
+    ...afterStyles,
     top: "20rem",
     height: "22%",
   };

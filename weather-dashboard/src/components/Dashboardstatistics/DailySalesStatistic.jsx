@@ -1,12 +1,10 @@
-import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
+import { Box, Divider, Paper, Typography } from "@mui/material";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { useTranslation } from "react-i18next";
-
 const DailySalesStatistic = () => {
-    const { t, i18n } = useTranslation();
-
+  const { t, i18n } = useTranslation();
   const options = {
     chart: {
       backgroundColor: "transparent",

@@ -31,7 +31,7 @@ tbody tr td {
 .dashboardNav{
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 1rem;
+  margin-top: 0.3rem;
   z-index: 2 !important;
   position: fixed;
 }
@@ -45,6 +45,7 @@ tbody tr td {
   border-radius: 0.75rem;
   padding: 0.2rem 1rem;
   position: fixed;
+  margin-top: -1rem;
 }
 #container {
   height: 200px;

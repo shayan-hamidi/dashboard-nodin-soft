@@ -5,14 +5,18 @@ import LeaderboardIcon from "@mui/icons-material/Leaderboard";
 import StoreIcon from "@mui/icons-material/Store";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import { useTranslation } from "react-i18next";
-
 const DashboardDetails = () => {
   const { t, i18n } = useTranslation();
   return (
     <Grid
       container
       spacing={3}
-      sx={{ display: "flex", flexDirection: "row",marginTop: { xs: '6rem',lg:"2rem"},marginBottom:"1rem" }}
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        marginTop: { xs: "6rem", lg: "2rem" },
+        marginBottom: "1rem",
+      }}
     >
       <Grid item xs={12} sm={12} md={6} lg={3}>
         <DashboardDetail

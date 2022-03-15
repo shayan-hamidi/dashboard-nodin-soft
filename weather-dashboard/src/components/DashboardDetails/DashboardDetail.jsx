@@ -12,7 +12,7 @@ const DashboardDetail = ({
   time,
 }) => {
   return (
-    <Box sx={{marginTop:"5.3rem"}}>
+    <Box sx={{ marginTop: "5.3rem" }}>
       <Paper
         sx={{
           color: "rgba(0, 0, 0, 0.87)",
@@ -68,7 +68,11 @@ const DashboardDetail = ({
           >
             <Typography
               variant="subtitle1"
-              sx={{ color: "rgb(123, 128, 154)", fontWeight: "300",paddingTop:"1rem" }}
+              sx={{
+                color: "rgb(123, 128, 154)",
+                fontWeight: "300",
+                paddingTop: "1rem",
+              }}
             >
               {title}
             </Typography>{" "}
@@ -100,7 +104,10 @@ const DashboardDetail = ({
             variant="body1"
             sx={{ paddingLeft: "1rem", paddingBottom: "1rem" }}
           >
-            <Typography variant="span" sx={{ color: "rgb(76, 175, 80)",fontWeight:"700" }}>
+            <Typography
+              variant="span"
+              sx={{ color: "rgb(76, 175, 80)", fontWeight: "700" }}
+            >
               {percent}
             </Typography>
             &nbsp;{time}

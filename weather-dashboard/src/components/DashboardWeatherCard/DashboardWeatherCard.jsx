@@ -1,20 +1,20 @@
-import { Autocomplete, Button, Grid, Paper, TextField, Typography } from "@mui/material";
+import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import WeatherIcon from "../../WeatherIcon.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 const DashboardWeatherCard = () => {
   const { t, i18n } = useTranslation();
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
-// useEffect(()=>{
-//     axios.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=2ad622963b956f73c2e0395cb01fad6b").then((response) => {
-//       setData(response.data);
-//       console.log(response.data);
-//     });
+  // useEffect(()=>{
+  //     axios.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=2ad622963b956f73c2e0395cb01fad6b").then((response) => {
+  //       setData(response.data);
+  //       console.log(response.data);
+  //     });
 
-// },[])
+  // },[])
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=2ad622963b956f73c2e0395cb01fad6b`;
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -152,7 +152,7 @@ const DashboardWeatherCard = () => {
                   alignItems: "center",
                 }}
               >
-                <img src={WeatherIcon} width={"200"} />
+                <img src={WeatherIcon} width={"200"} alt={"WeatherIcon"} />
               </Box>
             )}
             <Box>

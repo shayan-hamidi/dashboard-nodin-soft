@@ -12,7 +12,7 @@ import i18n from "../../i18n";
 import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-const DashboardHeader = () => {
+const DashboardHeader = (props) => {
   const [nav, setNav] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 1) {
@@ -26,13 +26,21 @@ const DashboardHeader = () => {
   const changeLanguage = (ln) => {
     return () => {
       i18n.changeLanguage(ln);
+      if (ln == "pe") {
+        document.body.setAttribute('dir', 'rtl')
+        props.setDrawerDir("right")
+      }else{
+        document.body.setAttribute('dir', 'ltr')
+        props.setDrawerDir("left")
+      }
     };
   };
+
   return (
     <Grid
       container
       className={nav ? "dashboardNav active" : "dashboardNav"}
-      sx={{ width: { xs: '100%',lg:"75%"}}}
+      sx={{ width: { xs: "100%", lg: "75%" } }}
     >
       <Grid
         item
@@ -101,7 +109,7 @@ const DashboardHeader = () => {
           }}
         >
           <Button>
-            <MenuOpenIcon />
+            <MenuOpenIcon sx={{ color: "rgb(123, 128, 154)" }} />
           </Button>
         </Link>
         <Link>

@@ -8,13 +8,11 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
 import DashboardOverview from "./DashboardOverview"
 import TableSingleRow from "./TableSingleRow";
 import TableBoxHeader from "./TableBoxHeader";
 import { useTranslation } from "react-i18next";
-
 const DashboardTableView = () => {
   const { t, i18n } = useTranslation();
   return (

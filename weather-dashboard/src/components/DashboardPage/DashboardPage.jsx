@@ -1,11 +1,11 @@
 import Grid from "@mui/material/Grid";
 import DashboardHeader from "../DashboardHeader/DashboardHeader";
-function DashboardPage() {
+function DashboardPage(props) {
   return (
     <>
       <Grid container>
         <Grid item xs={12}>
-          <DashboardHeader/>
+          <DashboardHeader drawerDir={props.drawerDir} setDrawerDir={props.setDrawerDir} />
         </Grid>
       </Grid>
     </>

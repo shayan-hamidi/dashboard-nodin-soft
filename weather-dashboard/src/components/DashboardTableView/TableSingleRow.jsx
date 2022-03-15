@@ -27,9 +27,15 @@ const TableSingleRow = ({
                 backgroundColor: "transparent",
               }}
             >
-              <img width={"40rem"} src={logo} />
+              <img width={"40rem"} src={logo} alt={"logo"} />
             </Avatar>
-            <Typography sx={{ color: "rgb(52, 71, 103)", fontWeight: "600",marginLeft:"8px" }}>
+            <Typography
+              sx={{
+                color: "rgb(52, 71, 103)",
+                fontWeight: "600",
+                marginLeft: "8px",
+              }}
+            >
               {logoName}
             </Typography>
           </Box>
@@ -54,7 +60,7 @@ const TableSingleRow = ({
                 cursor: "pointer",
               }}
             >
-              <img width="25rem" src={userLogo} />
+              <img width="25rem" src={userLogo} alt={"userLogo"} />
             </Avatar>
             <Avatar
               sx={{
@@ -66,7 +72,7 @@ const TableSingleRow = ({
                 marginLeft: "-10px",
               }}
             >
-              <img width="25rem" src={userLogo} />
+              <img width="25rem" src={userLogo} alt={"userLogo"} />
             </Avatar>
             <Avatar
               sx={{
@@ -78,7 +84,7 @@ const TableSingleRow = ({
                 cursor: "pointer",
               }}
             >
-              <img width="25rem" src={userLogo} />
+              <img width="25rem" src={userLogo} alt={"userLogo"} />
             </Avatar>
             <Avatar
               sx={{
@@ -90,7 +96,7 @@ const TableSingleRow = ({
                 cursor: "pointer",
               }}
             >
-              <img width="25rem" src={userLogo} />
+              <img width="25rem" src={userLogo} alt={"userLogo"} />
             </Avatar>
           </Box>
         </Box>

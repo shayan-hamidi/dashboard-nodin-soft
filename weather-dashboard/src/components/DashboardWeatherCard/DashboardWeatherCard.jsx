@@ -1,20 +1,22 @@
-import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Typography,
+  Autocomplete,
+} from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import WeatherIcon from "../../WeatherIcon.png";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import cities from "../../iranCities";
 const DashboardWeatherCard = () => {
   const { t, i18n } = useTranslation();
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
-  // useEffect(()=>{
-  //     axios.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=2ad622963b956f73c2e0395cb01fad6b").then((response) => {
-  //       setData(response.data);
-  //       console.log(response.data);
-  //     });
 
-  // },[])
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=2ad622963b956f73c2e0395cb01fad6b`;
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -78,11 +80,11 @@ const DashboardWeatherCard = () => {
             sx={{ display: "flex", flexDirection: "column" }}
           >
             <Grid item xs={12} sm={12} md={12} lg={12}>
-              {/* <Autocomplete
+              <Autocomplete
                 freeSolo
                 id="free-solo-2-demo"
                 disableClearable
-                // options={data.map((option) => option.title)}
+                options={cities.map((city) => city.slug)}
                 renderInput={(params) => (
                   <TextField
                     {...params}
@@ -99,16 +101,6 @@ const DashboardWeatherCard = () => {
                     sx={{ width: "90%" }}
                   />
                 )}
-              /> */}
-              <TextField
-                label="Weather Condition"
-                variant="standard"
-                value={location}
-                onChange={(event) => setLocation(event.target.value)}
-                onKeyPress={searchLocation}
-                placeholder="Enter Location"
-                type="text"
-                sx={{ width: "90%" }}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4}>

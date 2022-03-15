@@ -7,7 +7,6 @@ import dashboardLogo from "./dashboard.png";
 import DashboardToolbarButton from "./DashboardToolbarButton";
 import DashboardToolbarList from "./DashboardToolbarList";
 import { Drawer } from "@mui/material";
-import { useState } from "react";
 
 const DashboardToolbar = ({drawerDir}) => {
   return (

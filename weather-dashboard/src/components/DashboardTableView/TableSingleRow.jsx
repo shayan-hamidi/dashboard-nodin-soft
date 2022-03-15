@@ -16,7 +16,7 @@ const TableSingleRow = ({
 }) => {
   return (
     <TableRow>
-      <TableCell component="td">
+      <TableCell sx={{padding:"0.7rem"}} component="td">
         <Box>
           <Box
             sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}

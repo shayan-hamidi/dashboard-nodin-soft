@@ -17,10 +17,9 @@ function App() {
       direction="column"
       alignItems="center"
       justify="center"
-      spacing={3}
       sx={{ display: "flex", flexDirection: "row" }}
     >
-      <Grid item lg={2.6}>
+      <Grid item lg={3}>
         <DashboardToolbar drawerDir={drawerDir} />
       </Grid>
       <Grid xs={12} lg={9} item>

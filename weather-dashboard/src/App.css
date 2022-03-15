@@ -45,7 +45,7 @@ tbody tr td {
   border-radius: 0.75rem;
   padding: 0.2rem 1rem;
   position: fixed;
-  margin-top: -1rem;
+  margin-top: 0rem;
 }
 #container {
   height: 200px;

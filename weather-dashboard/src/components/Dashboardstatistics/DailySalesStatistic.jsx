@@ -72,6 +72,7 @@ const DailySalesStatistic = () => {
     series: [
       {
         name: "Mobile apps",
+        Symbol: undefined,
         data: [10, 5, 300, 320, 480, 330, 200, 210, 560],
       },
     ],

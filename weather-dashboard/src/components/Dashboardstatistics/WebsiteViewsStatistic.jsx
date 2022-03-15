@@ -9,7 +9,7 @@ const WebsiteViewsStatistic = () => {
     chart: {
       type: "column",
       backgroundColor: "transparent",
-      height: 160,
+      height: 170,
       width: 330,
       style: {
         marginTop: "10",
@@ -55,6 +55,20 @@ const WebsiteViewsStatistic = () => {
         data: [49, 19.9, 10, 21, 49, 10, 40],
       },
     ],
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,
+          },
+          chartOptions: {
+            chart: {
+              className: "small-chart",
+            },
+          },
+        },
+      ],
+    },
   };
 
   return (

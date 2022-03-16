@@ -8,10 +8,11 @@ const CompletedTasksStatic = () => {
   const options = {
     chart: {
       backgroundColor: "transparent",
-      height: 180,
+      height: 200,
       width: 330,
       style: {
-        marginTop: "15",
+        marginTop: "13",
+        marginRight: "5",
         height: "240",
       },
     },
@@ -36,13 +37,50 @@ const CompletedTasksStatic = () => {
     },
 
     xAxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
     },
 
     legend: {
       layout: "vertical",
       align: "right",
       verticalAlign: "middle",
+      showInLegend: false,
+      symbolHeight: 0,
+      symbolWidth: 0,
+      symbolRadius: 0,
+      x: -10,
+      y: 100,
+      borderWidth: 0,
+      
+      
+      
+      labelFormatter: function() 
+      {
+          if(this.name!='Series 1')
+          {
+              return this.name;
+          }
+          else
+          {
+              return 'Legend';
+          }
+      }
+    },
+    credits: {
+      enabled: false,
     },
 
     plotOptions: {

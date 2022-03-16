@@ -14,13 +14,13 @@ const Dashboardstatistics = () => {
       }}
     >
       <Grid container spacing={2} sx={{ display: "flex" }}>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={12} sm={12} md={6} lg={4} sx={{maxWidth:"100%"}}>
           <WebsiteViewsStatistic />
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={12} sm={12} md={6} lg={4} sx={{maxWidth:"100%"}}>
           <DailySalesStatistic />
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={12} sm={12} md={6} lg={4} sx={{maxWidth:"100%"}}>
           <CompletedTasksStatistic />
         </Grid>
       </Grid>

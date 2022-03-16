@@ -19,10 +19,10 @@ function App() {
       justify="center"
       sx={{ display: "flex", flexDirection: "row" }}
     >
-      <Grid item lg={3}>
+      <Grid item lg={2.9}>
         <DashboardToolbar drawerDir={drawerDir} />
       </Grid>
-      <Grid xs={12} lg={9} item>
+      <Grid xs={12} lg={8.8} item>
         <Box
           sx={{
             display: "flex",

@@ -6,6 +6,7 @@
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   background-color: rgb(240, 242, 245);
+  overflow-x: hidden;
 }
 thead tr th div {
   position: relative;
@@ -65,8 +66,13 @@ tbody tr td {
   fill: white;
 }
 .highcharts-tooltip-box {
-  fill: black;
   fill-opacity: 0.3;
   stroke-width: 0;
   color: white;
+}
+.highcharts-legend-item rect{
+  display:none;
+}
+.highcharts-legend-item path {
+    display: none;
 }

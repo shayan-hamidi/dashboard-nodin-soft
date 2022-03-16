@@ -14,7 +14,7 @@ const DashboardOverview = () => {
     content: `""`,
     position: "absolute",
     top: "10rem",
-    left: "1.9rem",
+    left: "2.9rem",
     height: "48%",
     opacity: "1",
     zIndex: "0",

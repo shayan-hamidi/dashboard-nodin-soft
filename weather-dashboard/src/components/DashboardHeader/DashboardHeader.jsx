@@ -96,7 +96,7 @@ const DashboardHeader = (props) => {
           size="small"
           label="Search here"
           variant="outlined"
-          sx={{ height: "60px" }}
+          sx={{ height: "60px",margin:"0rem 1rem" }}
         />
         <Link>
           <Button>

@@ -72,13 +72,14 @@ const DashboardDetail = ({
                 color: "rgb(123, 128, 154)",
                 fontWeight: "300",
                 paddingTop: "1rem",
+                paddingLeft:"1rem"
               }}
             >
               {title}
             </Typography>{" "}
             <Typography
               variant="h5"
-              sx={{ fontWeight: "bold", color: "rgb(52,71,103)" }}
+              sx={{ fontWeight: "bold", color: "rgb(52,71,103)",paddingLeft:"1rem" }}
             >
               {number}
             </Typography>
@@ -102,7 +103,7 @@ const DashboardDetail = ({
         <Box>
           <Typography
             variant="body1"
-            sx={{ paddingLeft: "1rem", paddingBottom: "1rem" }}
+            sx={{ paddingLeft: "1rem", paddingBottom: "1rem",paddingRight:"1rem" }}
           >
             <Typography
               variant="span"

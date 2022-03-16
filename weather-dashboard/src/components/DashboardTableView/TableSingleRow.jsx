@@ -58,6 +58,7 @@ const TableSingleRow = ({
                 transition: "all 200ms ease-in-out 0s",
                 flexShrink: "0",
                 cursor: "pointer",
+                marginLeft: "-10px",
               }}
             >
               <img width="25rem" src={userLogo} alt={"userLogo"} />

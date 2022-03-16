@@ -10,7 +10,7 @@ body {
 }
 thead tr th div {
   position: relative;
-  text-align: left;
+  text-align: justify;
   opacity: 0.7;
   background: transparent;
   color: rgb(123, 128, 154);

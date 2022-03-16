@@ -43,6 +43,7 @@ const useStyles = makeStyles({
   },
   listTypo: {
     fontSize: "0.875rem",
+    paddingRight: "0.9rem",
     paddingLeft: "0.9rem",
     fontWeight: "400",
   },
@@ -63,6 +64,7 @@ const DashboardToolbarList = () => {
               sx={{
                 fontSize: "0.875rem",
                 paddingLeft: "0.9rem",
+                paddingRight: "0.9rem",
                 fontWeight: "600",
               }}
             >
@@ -78,7 +80,9 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <TableViewIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography variant="span" className={classes.listTypo}>{t("Tables")}</Typography>
+            <Typography variant="span" className={classes.listTypo}>
+              {t("Tables")}
+            </Typography>
           </Box>
         </ListItem>
       </Link>
@@ -89,10 +93,7 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <ReceiptLongIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography
-              variant="span"
-              className={classes.listTypo}
-            >
+            <Typography variant="span" className={classes.listTypo}>
               {t("Billing")}
             </Typography>
           </Box>
@@ -105,10 +106,7 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <FormatTextdirectionRToLIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography
-              variant="span"
-              className={classes.listTypo}
-            >
+            <Typography variant="span" className={classes.listTypo}>
               {t("Rtl")}
             </Typography>
           </Box>
@@ -121,10 +119,7 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <NotificationsIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography
-              variant="span"
-              className={classes.listTypo}
-            >
+            <Typography variant="span" className={classes.listTypo}>
               {t("Notifications")}
             </Typography>
           </Box>
@@ -137,10 +132,7 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <PersonIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography
-              variant="span"
-              className={classes.listTypo}
-            >
+            <Typography variant="span" className={classes.listTypo}>
               {t("Profile")}
             </Typography>
           </Box>
@@ -153,10 +145,7 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <LoginIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography
-              variant="span"
-              className={classes.listTypo}
-            >
+            <Typography variant="span" className={classes.listTypo}>
               {t("Sign In")}
             </Typography>
           </Box>
@@ -169,10 +158,7 @@ const DashboardToolbarList = () => {
             <ListItemIcon sx={{ minWidth: "auto" }}>
               <AssignmentIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
-            <Typography
-              variant="span"
-              className={classes.listTypo}
-            >
+            <Typography variant="span" className={classes.listTypo}>
               {t("Sign Up")}
             </Typography>
           </Box>

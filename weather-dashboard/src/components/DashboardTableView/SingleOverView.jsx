@@ -22,7 +22,8 @@ const SingleOverView = ({iconComponent: IconComponent,beforeStyles,afterStyles,b
           padding: "0.3rem",
           width: "1.4rem",
           height: "1.4rem",
-          zIndex:"1"
+          zIndex:"1",
+          marginLeft:"1rem"
         }}
       >
         <IconComponent sx={{ color: "white", fontSize: "1rem" }} />

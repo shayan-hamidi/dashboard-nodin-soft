@@ -120,7 +120,7 @@ const DashboardToolbarList = () => {
               <NotificationsIcon sx={{ color: "rgb(255,255,255)" }} />
             </ListItemIcon>
             <Typography variant="span" className={classes.listTypo}>
-              {t("Notifications")}
+              {t("Notofications")}
             </Typography>
           </Box>
         </ListItem>

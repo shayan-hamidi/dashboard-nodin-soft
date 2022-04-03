@@ -214,6 +214,7 @@ const DailySalesStatistic = () => {
                 sx={{
                   color: "rgb(123, 128, 154)",
                   width: "1rem",
+                  paddingLeft: "0.2rem",
                   paddingRight: "0.2rem",
                 }}
               />

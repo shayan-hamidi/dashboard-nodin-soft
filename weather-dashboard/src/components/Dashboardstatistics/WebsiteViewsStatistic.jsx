@@ -164,6 +164,7 @@ const WebsiteViewsStatistic = () => {
                   color: "rgb(123, 128, 154)",
                   width: "1rem",
                   paddingRight: "0.2rem",
+                  paddingLeft: "0.2rem",
                 }}
               />
               <Typography

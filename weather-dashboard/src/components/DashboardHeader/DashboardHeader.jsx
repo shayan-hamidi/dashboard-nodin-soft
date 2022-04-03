@@ -13,6 +13,12 @@ import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 const DashboardHeader = (props) => {
+  const [alignment, setAlignment] = useState("English");
+
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
+
   const [nav, setNav] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 1) {
@@ -27,11 +33,11 @@ const DashboardHeader = (props) => {
     return () => {
       i18n.changeLanguage(ln);
       if (ln == "pe") {
-        document.body.setAttribute('dir', 'rtl')
-        props.setDrawerDir("right")
-      }else{
-        document.body.setAttribute('dir', 'ltr')
-        props.setDrawerDir("left")
+        document.body.setAttribute("dir", "rtl");
+        props.setDrawerDir("right");
+      } else {
+        document.body.setAttribute("dir", "ltr");
+        props.setDrawerDir("left");
       }
     };
   };
@@ -81,9 +87,11 @@ const DashboardHeader = (props) => {
         }}
       >
         <ToggleButtonGroup
-          sx={{ marginRight: "1rem", padding: "1rem" }}
+          sx={{ marginRight: "1rem", padding: "1rem",height:"40px",direction:"ltr"}}
           color="primary"
+          value={alignment}
           exclusive
+          onChange={handleChange}
         >
           <ToggleButton value="english" onClick={changeLanguage("en")}>
             English
@@ -96,7 +104,7 @@ const DashboardHeader = (props) => {
           size="small"
           label="Search here"
           variant="outlined"
-          sx={{ height: "60px",margin:"0rem 1rem" }}
+          sx={{ height: "60px", margin: "0rem 1rem" }}
         />
         <Link>
           <Button>

@@ -13,7 +13,7 @@ import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 const DashboardHeader = (props) => {
-  const [alignment, setAlignment] = useState("English");
+  const [alignment, setAlignment] = useState("english");
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);

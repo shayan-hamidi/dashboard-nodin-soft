@@ -10,7 +10,6 @@ import { Grid } from "@mui/material";
 import { useState } from "react";
 function App() {
   const [drawerDir,setDrawerDir] =useState("left")
-  console.log(drawerDir);
   return (
     <Grid
       container

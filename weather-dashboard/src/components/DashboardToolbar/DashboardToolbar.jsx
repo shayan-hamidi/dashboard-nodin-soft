@@ -8,13 +8,9 @@ import DashboardToolbarButton from "./DashboardToolbarButton";
 import DashboardToolbarList from "./DashboardToolbarList";
 import { Drawer } from "@mui/material";
 
-const DashboardToolbar = ({drawerDir}) => {
+const DashboardToolbar = ({ drawerDir }) => {
   return (
-    <Drawer
-      elevation={0}
-      variant="permanent"
-      anchor={drawerDir}
-    >
+    <Drawer elevation={0} variant="permanent" anchor={drawerDir}>
       <Paper
         sx={{
           background:
@@ -28,7 +24,6 @@ const DashboardToolbar = ({drawerDir}) => {
           borderRadius: "0.75rem",
           paddingTop: "1.8rem",
           boxShadow: "rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem",
-          display: "flex",
           flexDirection: "column",
           display: { xs: "none", sm: "none", md: "none", lg: "block" },
         }}

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 const DashboardToolbarButton = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <Button
       sx={{

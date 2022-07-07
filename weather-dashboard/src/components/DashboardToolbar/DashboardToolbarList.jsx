@@ -50,7 +50,7 @@ const useStyles = makeStyles({
 });
 const DashboardToolbarList = () => {
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <List sx={{ textDecoration: "none" }}>
       <Link sx={{ textDecoration: "none" }}>

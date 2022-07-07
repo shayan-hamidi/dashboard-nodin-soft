@@ -4,7 +4,7 @@ import Highcharts from "highcharts";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { useTranslation } from "react-i18next";
 const DailySalesStatistic = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const options = {
     chart: {
       backgroundColor: "transparent",
@@ -12,7 +12,7 @@ const DailySalesStatistic = () => {
       width: 330,
       style: {
         marginTop: "13",
-        marginRight:"5",
+        marginRight: "5",
         height: "240",
       },
     },
@@ -58,27 +58,18 @@ const DailySalesStatistic = () => {
     legend: {
       layout: "vertical",
       align: "right",
-      verticalAlign: "middle",
-          layout: 'vertical',
-    align: 'right',
-    verticalAlign: 'top',
-    x: -10,
-    y: 100,
-    borderWidth: 0,
-    
-    
-    
-    labelFormatter: function() 
-    {
-        if(this.name!='Series 1')
-        {
-            return this.name;
+      verticalAlign: "top",
+      x: -10,
+      y: 100,
+      borderWidth: 0,
+
+      labelFormatter: function () {
+        if (this.name !== "Series 1") {
+          return this.name;
+        } else {
+          return "Legend";
         }
-        else
-        {
-            return 'Legend';
-        }
-    }
+      },
     },
 
     plotOptions: {

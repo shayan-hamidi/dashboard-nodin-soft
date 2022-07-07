@@ -6,7 +6,7 @@ import StoreIcon from "@mui/icons-material/Store";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import { useTranslation } from "react-i18next";
 const DashboardDetails = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <Grid
       container

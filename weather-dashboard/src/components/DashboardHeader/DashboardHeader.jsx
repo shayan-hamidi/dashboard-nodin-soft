@@ -8,7 +8,6 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import TextField from "@mui/material/TextField";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
-import i18n from "../../i18n";
 import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -32,7 +31,7 @@ const DashboardHeader = (props) => {
   const changeLanguage = (ln) => {
     return () => {
       i18n.changeLanguage(ln);
-      if (ln == "pe") {
+      if (ln === "pe") {
         document.body.setAttribute("dir", "rtl");
         props.setDrawerDir("right");
       } else {
@@ -87,7 +86,12 @@ const DashboardHeader = (props) => {
         }}
       >
         <ToggleButtonGroup
-          sx={{ marginRight: "1rem", padding: "1rem",height:"40px",direction:"ltr"}}
+          sx={{
+            marginRight: "1rem",
+            padding: "1rem",
+            height: "40px",
+            direction: "ltr",
+          }}
           color="primary"
           value={alignment}
           exclusive

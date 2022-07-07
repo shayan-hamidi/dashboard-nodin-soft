@@ -9,7 +9,7 @@ import PaymentIcon from "@mui/icons-material/Payment";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useTranslation } from "react-i18next";
 const DashboardOverview = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const afterStyles = {
     content: `""`,
     position: "absolute",
@@ -50,7 +50,7 @@ const DashboardOverview = () => {
       >
         <Typography variant="h6">{t("Orders overview")}</Typography>
         <Box sx={{ marginTop: "0.7rem" }}>
-          <Typography
+          <Box
             sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
           >
             <ArrowUpwardIcon
@@ -78,7 +78,7 @@ const DashboardOverview = () => {
               24%
             </Typography>
             &nbsp; {t("this month")}
-          </Typography>
+          </Box>
         </Box>
       </Box>
       <Box sx={{ padding: "16px", marginTop: "2.6rem" }}>

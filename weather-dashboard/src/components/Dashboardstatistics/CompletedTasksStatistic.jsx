@@ -4,7 +4,7 @@ import Highcharts from "highcharts";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { useTranslation } from "react-i18next";
 const CompletedTasksStatic = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const options = {
     chart: {
       backgroundColor: "transparent",
@@ -64,20 +64,14 @@ const CompletedTasksStatic = () => {
       x: -10,
       y: 100,
       borderWidth: 0,
-      
-      
-      
-      labelFormatter: function() 
-      {
-          if(this.name!='Series 1')
-          {
-              return this.name;
-          }
-          else
-          {
-              return 'Legend';
-          }
-      }
+
+      labelFormatter: function () {
+        if ((this.name = "Series 1")) {
+          return this.name;
+        } else {
+          return "Legend";
+        }
+      },
     },
     credits: {
       enabled: false,

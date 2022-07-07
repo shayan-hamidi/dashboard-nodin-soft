@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import cities from "../../iranCities";
 const DashboardWeatherCard = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
 
@@ -22,7 +22,6 @@ const DashboardWeatherCard = () => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
         setData(response.data);
-        console.log(response.data);
       });
       setLocation("");
     }

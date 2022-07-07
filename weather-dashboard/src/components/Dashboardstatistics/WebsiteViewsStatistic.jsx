@@ -4,7 +4,7 @@ import Highcharts from "highcharts";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import { useTranslation } from "react-i18next";
 const WebsiteViewsStatistic = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const options = {
     chart: {
       type: "column",

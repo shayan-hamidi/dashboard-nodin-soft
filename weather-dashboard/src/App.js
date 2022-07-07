@@ -33,7 +33,7 @@ function App() {
           <DashboardDetails />
           <Dashboardstatistics />
           <DashboardTableView />
-          <DashboardWeatherCard />
+          {/* <DashboardWeatherCard /> */}
         </Box>
       </Grid>
     </Grid>
